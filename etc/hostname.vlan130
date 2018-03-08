@@ -1,0 +1,5 @@
+# Guest VLAN (130) on the LAN interface
+# Don't forget to add the vlan with ifconfig vlan130 create; ifconfig vlan130 vlan 130 vlandev re1
+inet 192.168.2.0  255.255.255.0 192.168.2.255 vlandev re1 description "Guest VLAN on 130"
+
+
