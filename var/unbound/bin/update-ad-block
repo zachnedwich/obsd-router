@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Fetch adblock list
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts | grep '^0\.0\.0\.0' | awk '{print "local-zone: \""$2"\" redirect\nlocal-data: \""$2" A 0.0.0.0\""}' >> /var/unbound/etc/ads.conf
+
+unbound-control reload
