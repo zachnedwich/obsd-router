@@ -12,43 +12,6 @@ Nobody should use this
 
 Hardware is an APU2c4 https://www.pcengines.ch/apu2c4.htm
 
+My ISP is Internode (Australia). I have ADSL2+ using a Cisco 887 and/or Billion 7800NXL in Bridge mode
 
-
-################
-
-/etc/pf.conf
-
-################
-
-/etc/dhcpd.conf
-
-################
-
-Daemons and spooky ghosts
-
-/etc/rc.conf.local
-
-################
-
-TODO
-
-###############
-
-Migrating from pfSense
-
-pfSense     - OpenBSD
--------------------------------------------------
-pfBlockerNG - unbound + DNS-BL from somewhere
-OpenVPN	    - copy fake root CA and server.conf
-NTP	        - chrony on PI with GPS
-dhcp        - dnsmasq or just dhcpd
-openvpn     - client ovpn + vlan 120/130
-apcupsd	    - no longer needed, NUT already on nas
-bsnmpd	    - pull snmp stuff out elsewhere
-rsyslog    	- again, dedi box for this
-snort	    - yes, install
-sshd	    - duh
-tftpd    	- sure, also tftp server on nas
-pf	        - export fw rules
-upnp    	- no upnp
-
+I have 1 (one) static IPv4 IP and a static /64 for IPv6

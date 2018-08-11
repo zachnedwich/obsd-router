@@ -1,6 +1,0 @@
-# upstream is a cisco router in bridge mode,
-# the isp uses IPoE, so no auth, no PPPoE, just dynamic IP
-
-dhcp
-up
-

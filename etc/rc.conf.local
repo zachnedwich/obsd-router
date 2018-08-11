@@ -1,2 +1,9 @@
+dhcpd2_flags="-c /etc/dhcpd2.conf vlan130"
+dhcpd2_rtable=2
+dhcpd_flags="-c /etc/dhcpd.conf trunk0"
+httpd_flags=
+rad_flags=
+sndiod_flags=NO
+unbound2_flags=-c /var/unbound/etc/unbound2.conf
+unbound2_rtable=2
 unbound_flags=""
-pkg_scripts="dnsmasq"
