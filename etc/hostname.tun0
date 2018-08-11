@@ -1,0 +1,4 @@
+description "Guest VLAN VPN egress via PIA"
+up
+rdomain 2
+!/usr/local/sbin/openvpn /etc/openvpn/pia/pia.ovpn

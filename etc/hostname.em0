@@ -1,0 +1,2 @@
+description "NIC0, closest to COM port"
+up

@@ -1,0 +1,14 @@
+# wait for the bridge interface (em2) to come up...
+!/bin/sleep 10
+rdomain 0
+description "PPPoE for Internode"
+inet   0.0.0.0 255.255.255.255 NONE \
+        pppoedev em2 authproto chap \
+        authname 'xxxxxx@internode.on.net' authkey 'hunter2'
+dest 0.0.0.1
+inet6 eui64
+!/sbin/route add default -ifp pppoe0 0.0.0.1
+!if [ -f /tmp/dhcp6c ] ; then kill -9 `cat /tmp/dhcp6c`; fi
+!/bin/sleep 5
+!/usr/local/sbin/dhcp6c -c /etc/dhcp6c.conf -p /tmp/dhcp6c pppoe0
+!/sbin/route add -inet6 default -ifp pppoe0 fe80::%pppoe0
