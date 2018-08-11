@@ -1,0 +1,6 @@
+INTERACTIVE:true
+MERGE:true
+AFTER:/etc/after_snap
+MIRROR:mirror.fsmg.org.nz
+FTP_OPTS:-C -V
+NO_X11:true
